@@ -13,6 +13,6 @@ defmodule Post do
   end
 end
 
-#{:ok, pid_del_actor} = Post.start_link
+#{:ok, pid_del_actor} = Post.init(:args)
 #post = pid_del_actor
-#for _ <- 1..1000, do: GenServer.cast(post, :like)
+# for _ <- 1..1000, do: Post.handle_cast(:like,post)
